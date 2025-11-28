@@ -22,7 +22,6 @@ bool TFLiteModel::loadModel(const QString &modelPath)
 {
     qDebug() << "Инициализация классификатора:" << modelPath;
 
-    // Всегда инициализируем модель в демо-режиме
     m_loaded = true;
     m_usingRealModel = false;
 

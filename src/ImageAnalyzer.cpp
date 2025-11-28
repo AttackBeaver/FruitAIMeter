@@ -11,20 +11,17 @@ ImageAnalyzer::ImageAnalyzer(QObject *parent)
     , m_classificationModel(new TFLiteModel(this))
     , m_modelsLoaded(false)
 {
-    // Инициализация генератора случайных чисел
     qsrand(QDateTime::currentMSecsSinceEpoch());
 }
 
 ImageAnalyzer::~ImageAnalyzer()
 {
-    // Ресурсы автоматически освобождаются благодаря родительской иерархии Qt
 }
 
 bool ImageAnalyzer::loadModels()
 {
     qDebug() << "Загрузка моделей...";
 
-    // Загружаем модель классификации
     bool success = m_classificationModel->loadModel("models/apple_freshness.tflite");
 
     m_modelsLoaded = success;
@@ -38,11 +35,9 @@ void ImageAnalyzer::analyzeImage(const QString &imagePath)
 {
     qDebug() << "Начало анализа изображения:" << imagePath;
 
-    // Загружаем изображение
     QImage image;
     if (imagePath.startsWith("qrc:/")) {
-        // Загрузка из ресурсов
-        QString resourcePath = imagePath.mid(3); // Убираем "qrc"
+        QString resourcePath = imagePath.mid(3); 
         if (!image.load(resourcePath)) {
             qDebug() << "Ошибка загрузки из ресурсов:" << resourcePath;
             emit analysisFailed("Не удалось загрузить демо-изображение");
@@ -50,7 +45,6 @@ void ImageAnalyzer::analyzeImage(const QString &imagePath)
         }
         qDebug() << "Загружено из ресурсов:" << resourcePath;
     } else {
-        // Загрузка из файловой системы
         if (!image.load(imagePath)) {
             qDebug() << "Ошибка загрузки из файла:" << imagePath;
             emit analysisFailed("Не удалось загрузить изображение");
@@ -67,7 +61,6 @@ void ImageAnalyzer::analyzeImage(const QString &imagePath)
 
     qDebug() << "Изображение загружено успешно, размер:" << image.size();
 
-    // Всегда выполняем анализ
     performRealAnalysis(image);
 }
 

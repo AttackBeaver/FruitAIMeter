@@ -20,7 +20,7 @@ Page {
 
     Column {
         anchors.top: parent.top
-        anchors.topMargin: header.height + Theme.paddingLarge
+        anchors.topMargin: header.height + Theme.paddingLargeF
         anchors.left: parent.left
         anchors.right: parent.right
         anchors.bottom: parent.bottom
@@ -28,7 +28,7 @@ Page {
 
         // Заголовок и описание
         Column {
-            width: parent.width - 2*Theme.horizontalPageMargin
+            width: parent.width - 2 * Theme.horizontalPageMargin
             anchors.horizontalCenter: parent.horizontalCenter
             spacing: Theme.paddingMedium
 
@@ -59,7 +59,7 @@ Page {
 
         // Основная кнопка действия
         Button {
-            width: parent.width - 2*Theme.horizontalPageMargin
+            width: parent.width - 2 * Theme.horizontalPageMargin
             anchors.horizontalCenter: parent.horizontalCenter
             text: qsTr("🔍 Начать анализ яблока")
             onClicked: pageStack.push(Qt.resolvedUrl("CameraPage.qml"))
@@ -67,9 +67,9 @@ Page {
 
         // Возможности приложения
         Rectangle {
-            width: parent.width - 2*Theme.horizontalPageMargin
+            width: parent.width - 2 * Theme.horizontalPageMargin
             anchors.horizontalCenter: parent.horizontalCenter
-            height: featuresColumn.height + 2*Theme.paddingMedium
+            height: featuresColumn.height + 2 * Theme.paddingMedium
             color: Theme.rgba(Theme.highlightBackgroundColor, 0.1)
             radius: Theme.paddingSmall
 
@@ -185,9 +185,9 @@ Page {
 
         // Инструкция
         Rectangle {
-            width: parent.width - 2*Theme.horizontalPageMargin
+            width: parent.width - 2 * Theme.horizontalPageMargin
             anchors.horizontalCenter: parent.horizontalCenter
-            height: instructionColumn.height + 2*Theme.paddingMedium
+            height: instructionColumn.height + 2 * Theme.paddingMedium
             color: Theme.rgba(Theme.highlightColor, 0.1)
             radius: Theme.paddingSmall
 

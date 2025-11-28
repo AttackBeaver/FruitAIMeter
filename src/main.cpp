@@ -17,7 +17,6 @@ int main(int argc, char *argv[])
     QScopedPointer<QQuickView> view(Aurora::Application::createView());
     view->setSource(Aurora::Application::pathTo(QStringLiteral("qml/FruitAIMeter.qml")));
 
-    // Настройки для камеры
     view->setColor(Qt::black);
     view->setResizeMode(QQuickView::SizeRootObjectToView);
 
