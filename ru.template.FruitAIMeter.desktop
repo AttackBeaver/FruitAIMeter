@@ -1,0 +1,13 @@
+[Desktop Entry]
+Type=Application
+X-Nemo-Application-Type=silica-qt5
+Icon=ru.template.FruitAIMeter
+Exec=/usr/bin/ru.template.FruitAIMeter
+Name=AppleMind
+Name[ru]=ЯблочныйРазум
+
+[X-Application]
+Permissions=Camera
+OrganizationName=ru.template
+ApplicationName=FruitAIMeter
+ExecDBus=/usr/bin/ru.template.FruitAIMeter

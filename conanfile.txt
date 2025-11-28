@@ -1,0 +1,6 @@
+[requires]
+opencv/4.5.5
+tensorflow-lite/2.8.0
+
+[generators]
+qmake

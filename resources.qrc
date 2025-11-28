@@ -1,0 +1,21 @@
+<RCC>
+    <qresource prefix="/">
+        <file>qml/pages/AboutPage.qml</file>
+        <file>qml/pages/MainPage.qml</file>
+        <file>qml/pages/CameraPage.qml</file>
+        <file>qml/cover/DefaultCoverPage.qml</file>
+        <file>qml/FruitAIMeter.qml</file>
+        <file>icons/86x86/ru.template.FruitAIMeter.png</file>
+        <file>icons/108x108/ru.template.FruitAIMeter.png</file>
+        <file>icons/128x128/ru.template.FruitAIMeter.png</file>
+        <file>icons/172x172/ru.template.FruitAIMeter.png</file>
+        <file>images/1.jpg</file>
+        <file>models/apple_freshness.tflite</file>
+        <file>images/2.jpg</file>
+        <file>images/4.jpg</file>
+        <file>images/5.jpg</file>
+        <file>images/6.jpg</file>
+        <file>images/7.jpg</file>
+        <file>images/43.jpg</file>
+    </qresource>
+</RCC>
